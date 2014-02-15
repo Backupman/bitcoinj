@@ -1,4 +1,4 @@
-package org.litecoin;
+package de.machinecoin;
 
 import com.google.bitcoin.core.*;
 import com.google.bitcoin.crypto.KeyCrypter;
@@ -6,14 +6,14 @@ import com.google.bitcoin.crypto.KeyCrypter;
 import java.math.BigInteger;
 
 /**
- * An extension of BitcoinJ's wallet to use Litecoin's fee structure by default
+ * An extension of BitcoinJ's wallet to use Machinecoin's fee structure by default
  */
-public class LitecoinWallet extends Wallet {
-    public LitecoinWallet(NetworkParameters params) {
+public class MachinecoinWallet extends Wallet {
+    public MachinecoinWallet(NetworkParameters params) {
         super(params);
     }
 
-    public LitecoinWallet(NetworkParameters params, KeyCrypter keyCrypter) {
+    public MachinecoinWallet(NetworkParameters params, KeyCrypter keyCrypter) {
         super(params, keyCrypter);
     }
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.litecoin;
+package de.machinecoin;
 
 import com.google.bitcoin.core.*;
 import com.google.bitcoin.net.discovery.PeerDBDiscovery;
@@ -29,9 +29,9 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * A version of PeerDBDiscovery that only returns nodes which support Bloom filters according to Litecoin's BLOOM bit
+ * A version of PeerDBDiscovery that only returns nodes which support Bloom filters according to Machinecoin's BLOOM bit
  */
-public class LitcoinPeerDBDiscovery extends PeerDBDiscovery {
+public class MachinecoinPeerDBDiscovery extends PeerDBDiscovery {
     // Ugly hack to only let the PeerDB know about peers with NODE_BLOOM (1<<1)
     // Wrap the connected event listener and intercept calls to it
     private static class WrappedEventListener extends AbstractPeerEventListener {
@@ -82,7 +82,7 @@ public class LitcoinPeerDBDiscovery extends PeerDBDiscovery {
         }
     }
 
-    public LitcoinPeerDBDiscovery(NetworkParameters params, File db, PeerGroup group) {
+    public MachinecoinPeerDBDiscovery(NetworkParameters params, File db, PeerGroup group) {
         super(params, db, new PeerGroupWrapper(params, group));
     }
 }

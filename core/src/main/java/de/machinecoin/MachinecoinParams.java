@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.litecoin;
+package de.machinecoin;
 
 import com.google.bitcoin.core.*;
 import com.google.bitcoin.script.Script;
@@ -32,10 +32,10 @@ import static com.google.common.base.Preconditions.checkState;
  * Parameters for the testnet, a separate public instance of Bitcoin that has relaxed rules suitable for development
  * and testing of applications and new Bitcoin versions.
  */
-public class LitecoinParams extends NetworkParameters {
-    public LitecoinParams() {
+public class MachinecoinParams extends NetworkParameters {
+    public MachinecoinParams() {
         super();
-        id = "org.litecoin.production";
+        id = "de.machinecoin.production";
         proofOfWorkLimit = Utils.decodeCompactBits(0x1e0fffffL);
         addressHeader = 48;
         acceptableAddressCodes = new int[] { 48 };
@@ -75,11 +75,7 @@ public class LitecoinParams extends NetworkParameters {
         subsidyDecreaseBlockCount = 840000;
 
         dnsSeeds = new String[] {
-                "dnsseed.litecointools.com",
-                "dnsseed.litecoinpool.org",
-                "dnsseed.ltc.xurious.com",
-                "dnsseed.koin-project.com",
-                "dnsseed.weminemnc.com"
+                "dnsseed.machinecoin.de"
         };
     }
 
@@ -87,10 +83,10 @@ public class LitecoinParams extends NetworkParameters {
     @Override
     public BigInteger getMaxMoney() { return MAX_MONEY; }
 
-    private static LitecoinParams instance;
-    public static synchronized LitecoinParams get() {
+    private static MachinecoinParams instance;
+    public static synchronized MachinecoinParams get() {
         if (instance == null) {
-            instance = new LitecoinParams();
+            instance = new MachinecoinParams();
         }
         return instance;
     }

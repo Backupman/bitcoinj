@@ -1,7 +1,7 @@
 package com.google.bitcoin.tools;
 
 import com.google.bitcoin.core.*;
-import org.litecoin.LitecoinParams;
+import de.machinecoin.MachinecoinParams;
 import com.google.bitcoin.store.BlockStore;
 import com.google.bitcoin.store.MemoryBlockStore;
 import com.google.bitcoin.utils.BriefLogFormatter;
@@ -26,7 +26,7 @@ import static com.google.common.base.Preconditions.checkState;
 public class BuildCheckpoints {
     public static void main(String[] args) throws Exception {
         BriefLogFormatter.init();
-        final NetworkParameters params = LitecoinParams.get();
+        final NetworkParameters params = MachinecoinParams.get();
 
         // Sorted map of UNIX time of block to StoredBlock object.
         final TreeMap<Integer, StoredBlock> checkpoints = new TreeMap<Integer, StoredBlock>();
