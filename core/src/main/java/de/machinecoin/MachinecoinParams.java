@@ -95,10 +95,10 @@ public class MachinecoinParams extends NetworkParameters {
     @Override
     public int getRetargetBlockCount(StoredBlock cursor) {
         if (cursor.getHeight() + 1 != getInterval()) {
-            //Logger.getLogger("wallet_ltc").info("Normal LTC retarget");
+            //Logger.getLogger("wallet_mac").info("Normal MAC retarget");
             return getInterval();
         } else {
-            //Logger.getLogger("wallet_ltc").info("Genesis LTC retarget");
+            //Logger.getLogger("wallet_mac").info("Genesis MAC retarget");
             return getInterval() - 1;
         }
     }
