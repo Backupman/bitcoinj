@@ -60,7 +60,7 @@ public class BuildCheckpoints {
         checkState(checkpoints.size() > 0);
 
         // Write checkpoint data out.
-        final FileOutputStream fileOutputStream = new FileOutputStream("checkpointslitecoin", false);
+        final FileOutputStream fileOutputStream = new FileOutputStream("checkpointsmachinecoin", false);
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
         final DigestOutputStream digestOutputStream = new DigestOutputStream(fileOutputStream, digest);
         digestOutputStream.on(false);
@@ -85,7 +85,7 @@ public class BuildCheckpoints {
         store.close();
 
         // Sanity check the created file.
-        CheckpointManager manager = new CheckpointManager(params, new FileInputStream("checkpointslitecoin"));
+        CheckpointManager manager = new CheckpointManager(params, new FileInputStream("checkpointsmachinecoin"));
         checkState(manager.numCheckpoints() == checkpoints.size());
         StoredBlock test = manager.getCheckpointBefore(1346335719);  // Just after block 200,000
         checkState(test.getHeight() == 199584);
