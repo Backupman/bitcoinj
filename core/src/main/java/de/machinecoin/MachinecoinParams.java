@@ -37,9 +37,9 @@ public class MachinecoinParams extends NetworkParameters {
         super();
         id = "de.machinecoin.production";
         proofOfWorkLimit = Utils.decodeCompactBits(0x1e0fffffL);
-        addressHeader = 48;
-        acceptableAddressCodes = new int[] { 48 };
-        port = 9333;
+        addressHeader = 50;
+        acceptableAddressCodes = new int[] { 50 };
+        port = 40333;
         packetMagic = 0xfbc0b6dbL;
         dumpedPrivateKeyHeader = 128 + addressHeader;
 
@@ -47,16 +47,16 @@ public class MachinecoinParams extends NetworkParameters {
         interval = targetTimespan/((int)(2.5 * 60));
 
         genesisBlock.setDifficultyTarget(0x1e0ffff0L);
-        genesisBlock.setTime(1317972665L);
-        genesisBlock.setNonce(2084524493L);
+        genesisBlock.setTime(1389040865L);
+        genesisBlock.setNonce(3716037L);
         genesisBlock.removeTransaction(0);
         Transaction t = new Transaction(this);
         try {
             // A script containing the difficulty bits and the following message:
             //
-            //   "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+            //   "Der Tagesspiegel 06/Jan/2014 Henry Maske, famous fighter, is now 50 years old"
             byte[] bytes = Hex.decode
-                    ("04ffff001d0104404e592054696d65732030352f4f63742f32303131205374657665204a6f62732c204170706c65e280997320566973696f6e6172792c2044696573206174203536");
+                    ("04ffff001d01044c4d4465722054616765737370696567656c2030362f4a616e2f323031342048656e7279204d61736b652c2066616d6f757320666967687465722c206973206e6f77203530207965617273206f6c64");
             t.addInput(new TransactionInput(this, t, bytes));
             ByteArrayOutputStream scriptPubKeyBytes = new ByteArrayOutputStream();
             Script.writeBytes(scriptPubKeyBytes, Hex.decode
@@ -69,7 +69,7 @@ public class MachinecoinParams extends NetworkParameters {
         }
         genesisBlock.addTransaction(t);
         String genesisHash = genesisBlock.getHashAsString();
-        checkState(genesisHash.equals("12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2"),
+        checkState(genesisHash.equals("6a1f879bcea5471cbfdee1fd0cb2ddcc4fed569a500e352d41de967703e83172"),
                 genesisBlock);
 
         subsidyDecreaseBlockCount = 840000;
