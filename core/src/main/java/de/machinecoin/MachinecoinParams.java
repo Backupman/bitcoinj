@@ -75,7 +75,11 @@ public class MachinecoinParams extends NetworkParameters {
         subsidyDecreaseBlockCount = 840000;
 
         dnsSeeds = new String[] {
-                "dnsseed.machinecoin.de"
+                "dnsseed.machinecoin.de",
+                "dnsseed2.machinecoin.de",
+                "dnsseed3.machinecoin.de",
+                "dnsseed4.machinecoin.de",
+                "dnsseed5.machinecoin.de"
         };
     }
 
