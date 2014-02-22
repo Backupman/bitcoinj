@@ -87,8 +87,8 @@ public class BuildCheckpoints {
         // Sanity check the created file.
         CheckpointManager manager = new CheckpointManager(params, new FileInputStream("checkpointsmachinecoin"));
         checkState(manager.numCheckpoints() == checkpoints.size());
-        StoredBlock test = manager.getCheckpointBefore(1346335719);  // Just after block 200,000
-        checkState(test.getHeight() == 199584);
-        checkState(test.getHeader().getHashAsString().equals("49b13ca1eb4a55ced4e99e38469db12b74428c19fd2fb9fa0c262e5839eccf6a"));
+        StoredBlock test = manager.getCheckpointBefore(1389848419);  // Just after block 7,000
+        checkState(test.getHeight() == 6048);
+        checkState(test.getHeader().getHashAsString().equals("04aab25a3ff24eefd77686679538c3faafbbe9a80f8292023be61c1e40542858"));
     }
 }
