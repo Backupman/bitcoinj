@@ -1,7 +1,7 @@
 package com.google.bitcoin.tools;
 
 import com.google.bitcoin.core.*;
-import de.machinecoin.MachinecoinParams;
+import org.machinecoin.MachinecoinParams;
 import com.google.bitcoin.store.BlockStore;
 import com.google.bitcoin.store.MemoryBlockStore;
 import com.google.bitcoin.utils.BriefLogFormatter;

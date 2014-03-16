@@ -1,4 +1,4 @@
-package de.machinecoin;
+package org.machinecoin;
 
 import com.google.bitcoin.core.*;
 import com.google.bitcoin.crypto.KeyCrypter;

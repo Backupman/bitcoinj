@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.machinecoin;
+package org.machinecoin;
 
 import com.google.bitcoin.core.*;
 import com.google.bitcoin.params.MainNetParams;

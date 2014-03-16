@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.machinecoin;
+package org.machinecoin;
 
 import com.google.bitcoin.core.*;
 import com.google.bitcoin.script.Script;
@@ -35,7 +35,7 @@ import static com.google.common.base.Preconditions.checkState;
 public class MachinecoinParams extends NetworkParameters {
     public MachinecoinParams() {
         super();
-        id = "de.machinecoin.production";
+        id = "org.machinecoin.production";
         proofOfWorkLimit = Utils.decodeCompactBits(0x1e0fffffL);
         addressHeader = 50;
         acceptableAddressCodes = new int[] { 50 };
@@ -75,7 +75,7 @@ public class MachinecoinParams extends NetworkParameters {
         subsidyDecreaseBlockCount = 840000;
 
         dnsSeeds = new String[] {
-                "dnsseed.machinecoin.de"
+                "dnsseed.machinecoin.org"
         };
     }
 
